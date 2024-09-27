@@ -1,0 +1,13 @@
+- `npx create-next-app@latest`
+- `npm i tailwindcss-animate`
+- `npm install next-themes`
+- `npm i react-icons`
+- `npm i mini-svg-data-uri`
+- `npm i framer-motion clsx tailwind-merge`
+- 
+- 
+- 
+- 
+- 
+- 
+
