@@ -9,15 +9,7 @@ import Experience from "@/components/Experience";
 import Approach from "@/components/Approach";
 import Footer from "@/components/Footer";
 export  const  runtime= "edge";
-//@ts-ignore
-import global from 'global';
 
-import 'core-js/stable';
-import 'regenerator-runtime/runtime';
-
-if (typeof self === 'undefined') {
-  global.self = global;
-}
 
 
 export default function Home() {

@@ -47,9 +47,9 @@ import { Replay } from "@sentry/replay"; // Replay functionality
 
 // @ts-ignore
 // @ts-ignore
-Sentry.init({
+init({
   dsn: "https://ce9ea5687c36fa4ebcd7834cca1c9033@o4507987466387456.ingest.de.sentry.io/4508280148852816",
-  tunnel: "./pages/api/tunnel.js", // Tunnel endpoint
+  tunnel: "app/api/tunnel.js", // Tunnel endpoint
   integrations: [
     //@ts-ignore
     new BrowserTracing(),
