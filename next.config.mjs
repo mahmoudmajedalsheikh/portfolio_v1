@@ -1,8 +1,8 @@
 import {withSentryConfig} from '@sentry/nextjs';
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  distDir: "build",
-//   output: "export",
+  // distDir: "build",
+  output: "export",
 //   typescript: {
 //   // !! WARN !!
 //   // Dangerously allow production builds to successfully complete even if
