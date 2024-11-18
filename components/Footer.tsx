@@ -2,6 +2,7 @@ import React from 'react';
 import MagicButton from "@/components/ui/MagicButton";
 import {FaLocationArrow} from "react-icons/fa";
 import {socialMedia} from "@/data";
+import Image from "next/image";
 
 function Footer() {
   return (
@@ -28,7 +29,7 @@ function Footer() {
                flex justify-center items-center backdrop-blur-lg saturate-180
                bg-opacity-75 bg-black-200 rounded-lg border-black-300
                '>
-              <img src={profile.img} width={20} height={20}/>
+              <Image src={profile.img} alt={`social Media Icon`} width={20} height={20}/>
             </div>
 
           ))}

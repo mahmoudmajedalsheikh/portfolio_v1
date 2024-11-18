@@ -1,7 +1,7 @@
 "use client"
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./GradientBg";
-import { Globe } from "./Globe";
+import Image from "next/image";
 import { GlobeDemo } from "./GridGlobe";
 import Lottie from "react-lottie";
 import { useState } from "react";
@@ -82,7 +82,7 @@ const handleCopy =()=>{
         {/* //=================================== */}
         <div className="w-full h-full absolute">
           {img && (
-            <img
+            <Image
               src={img}
               alt={img}
               className={cn(imgClassName, "object-cover object-center ")}
@@ -91,7 +91,7 @@ const handleCopy =()=>{
         </div>
         <div className={`absolute right-0 -bottom-5 ${id === 5 && "w-full opacity-80"} `}>
           {spareImg && (
-            <img
+            <Image
               src={spareImg}
               alt={spareImg}
               //   width={220}
