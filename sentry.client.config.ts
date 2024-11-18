@@ -50,6 +50,7 @@ import { Replay } from "@sentry/replay"; // Replay functionality
 init({
   dsn: "https://ce9ea5687c36fa4ebcd7834cca1c9033@o4507987466387456.ingest.de.sentry.io/4508280148852816",
   tunnel: "app/api/tunnel.js", // Tunnel endpoint
+  authToken: process.env.SENTRY_AUTH_TOKEN,
   integrations: [
     //@ts-ignore
     new BrowserTracing(),
