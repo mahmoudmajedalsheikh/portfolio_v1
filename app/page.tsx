@@ -9,6 +9,8 @@ import Experience from "@/components/Experience";
 import Approach from "@/components/Approach";
 import Footer from "@/components/Footer";
 
+export  const  runtime= "edge"
+
 export default function Home() {
   return (
     <>

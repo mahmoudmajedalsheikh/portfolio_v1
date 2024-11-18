@@ -1,7 +1,15 @@
 {
-  "extends": "next",
+//  "extends": "next",
+  "extends": [
+    "next"
+//    "next/core-web-vitals",
+//    "plugin:eslint-plugin-next-on-pages/recommended"
+  ],
   "rules": {
     "react/no-unescaped-entities": "off",
     "@next/next/no-page-custom-font": "off"
   }
+//  "plugins": [
+//    "eslint-plugin-next-on-pages"
+//  ]
 }

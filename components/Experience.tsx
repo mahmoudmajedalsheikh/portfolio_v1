@@ -1,7 +1,7 @@
 import React from 'react';
 import {workExperience} from "@/data";
 import {Button} from "@/components/ui/MovingBorders";
-import Image from "next/image";
+
 
 function Experience() {
   return (
@@ -20,7 +20,7 @@ function Experience() {
               className='flex lg:flex-row flex-col lg:items-center p-3 py-6
               md:p-5 lg:p-10 gap-2
               '>
-              <Image src={card.thumbnail} alt={card.thumbnail}
+              <img src={card.thumbnail} alt={card.thumbnail}
                 className='lg:w-32 lmd:w-20 w-16'
               />
               <div className='lg:ms-5'>

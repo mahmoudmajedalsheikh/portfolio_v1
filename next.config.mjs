@@ -1,16 +1,22 @@
+// import { setupDevPlatform } from '@cloudflare/next-on-pages/next-dev';
 import {withSentryConfig} from '@sentry/nextjs';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // distDir: "build",
   output: "export",
-//   typescript: {
-//   // !! WARN !!
-//   // Dangerously allow production builds to successfully complete even if
-//   // your project has type errors.
-//   // !! WARN !!
-//   ignoreBuildErrors: true,
-// },
+  typescript: {
+  // !! WARN !!
+  // Dangerously allow production builds to successfully complete even if
+  // your project has type errors.
+  // !! WARN !!
+  ignoreBuildErrors: true,
+},
 };
+
+// if (process.env.NODE_ENV === 'development') {
+//   await setupDevPlatform();
+// }
 
 
 export default withSentryConfig(withSentryConfig(withSentryConfig(nextConfig, {
