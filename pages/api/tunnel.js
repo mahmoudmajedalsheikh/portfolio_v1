@@ -11,10 +11,12 @@ export default async function handler(req, res) {
     const projectId = dsn.pathname?.replace("/", "");
 
     if (dsn.hostname !== SENTRY_HOST) {
+// @ts-ignore
       throw new Error(`Invalid sentry hostname: ${dsn.hostname}`);
     }
 
     if (!projectId || !SENTRY_PROJECT_IDS.includes(projectId)) {
+      // @ts-ignore
       throw new Error(`Invalid sentry project ID: ${projectId}`);
     }
 

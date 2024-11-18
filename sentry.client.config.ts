@@ -2,7 +2,7 @@
 // The config you add here will be used whenever a users loads a page in their browser.
 // https://docs.sentry.io/platforms/javascript/guides/nextjs/
 
-// import * as Sentry from "@sentry/nextjs";
+
 //
 //
 // Sentry.init({
@@ -41,7 +41,9 @@
 //   // Setting this option to true will print useful information to the console while you're setting up Sentry.
 //   tunnel: "/tunnel",
 // });
-import * as Sentry from "@sentry/nextjs";
+import { init } from "@sentry/nextjs";
+import { BrowserTracing } from "@sentry/tracing"; // Tracing for browser
+import { Replay } from "@sentry/replay"; // Replay functionality
 
 // @ts-ignore
 // @ts-ignore
@@ -50,9 +52,9 @@ Sentry.init({
   tunnel: "./pages/api/tunnel.js", // Tunnel endpoint
   integrations: [
     //@ts-ignore
-    new Sentry.BrowserTracing(),
+    new BrowserTracing(),
     //@ts-ignore
-    new Sentry.Replay(), // Optional: For session replay features
+    new Replay(), // Optional: For session replay features
   ],
   tracesSampleRate: 1.0, // Adjust sampling rate based on your needs
   replaysSessionSampleRate: 0.1, // Optional
