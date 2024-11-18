@@ -4,9 +4,12 @@
 
 import * as Sentry from "@sentry/nextjs";
 
+// @ts-ignore
 Sentry.init({
   dsn: "https://ce9ea5687c36fa4ebcd7834cca1c9033@o4507987466387456.ingest.de.sentry.io/4508280148852816",
-
+  tunnel: "app/api/tunnel.js", // Tunnel endpoint
+  //@ts-ignore
+  authToken: process.env.SENTRY_AUTH_TOKEN,
   // Add optional integrations for additional features
   integrations: [
     Sentry.replayIntegration(
@@ -22,6 +25,10 @@ Sentry.init({
       isNameRequired: true,
       isEmailRequired: true,
     }),
+    //@ts-ignore
+    new Sentry.BrowserTracing(),
+
+
   ],
 
   // Define how likely traces are sampled. Adjust this value in production, or use tracesSampler for greater control.
