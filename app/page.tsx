@@ -1,7 +1,6 @@
 
 import { FloatingNav } from "@/components/ui/FloatingNav";
 import Hero from "../components/Hero";
-
 import Grid from "@/components/Grid";
 import RecentProject from "@/components/RecentProject";
 import {navItems} from "@/data";
@@ -9,8 +8,17 @@ import Clients from "@/components/Clients";
 import Experience from "@/components/Experience";
 import Approach from "@/components/Approach";
 import Footer from "@/components/Footer";
+export  const  runtime= "edge";
+//@ts-ignore
+import global from 'global';
 
-export  const  runtime= "edge"
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
+
+if (typeof self === 'undefined') {
+  global.self = global;
+}
+
 
 export default function Home() {
   return (
