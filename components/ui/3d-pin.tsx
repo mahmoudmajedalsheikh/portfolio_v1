@@ -1,8 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
+import { cn } from "./utils";
 import Link from "next/link";
+
+
 
 export const PinContainer = ({
   children,
@@ -27,7 +29,13 @@ export const PinContainer = ({
   const onMouseLeave = () => {
     setTransform("translate(-50%,-50%) rotateX(0deg) scale(1)");
   };
+  const [isClient, setIsClient] = useState(false);
 
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) return null; // Avoid rendering on the server
   return (
     <Link
       className={cn(

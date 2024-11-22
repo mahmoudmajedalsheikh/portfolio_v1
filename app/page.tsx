@@ -1,8 +1,14 @@
 import { FloatingNav } from "@/components/ui/FloatingNav";
 import Hero from "../components/Hero";
-import { FaHome } from "react-icons/fa";
 import Grid from "@/components/Grid";
+import {navItems} from "@/data";
 import RecentProject from "@/components/RecentProject";
+import Clients from "@/components/Clients";
+import Experience from "@/components/Experience";
+import Approach from "@/components/Approach";
+import Footer from "@/components/Footer";
+export  const  runtime= "edge";
+
 
 export default function Home() {
   return (
@@ -13,11 +19,15 @@ export default function Home() {
       >
         <div className="max-w-7xl w-full">
           <FloatingNav
-            navItems={[{ name: "Home", link: "/", icon: <FaHome /> }]}
+            navItems={navItems}
           />
           <Hero />
           <Grid />
           <RecentProject/>
+          <Clients />
+          <Experience/>
+          <Approach />
+          <Footer/>
         </div>
       </main>
     </>
