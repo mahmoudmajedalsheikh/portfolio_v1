@@ -1,6 +1,6 @@
 import React from "react";
 import {InfiniteMovingCards} from "@/components/ui/InfiniteMovingCards";
-import {companies, testimonials} from "./index";
+import {companies, testimonials} from "@/data/index";
 
 function Clients() {
   return (

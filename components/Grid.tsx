@@ -1,6 +1,6 @@
 import React from 'react'
 import { BentoGrid, BentoGridItem } from './ui/BentoGrid'
-import {gridItems} from './index'
+import {gridItems} from '@/data/index'
 /*
 
     className
